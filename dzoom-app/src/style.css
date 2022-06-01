@@ -1,0 +1,28 @@
+input[type='number'] {
+    width: 100px;
+}
+
+#container {
+  position: relative;
+  width: 600px;
+  height: 700px;
+  background-color: #F5F5F5;
+  border: 1px solid gray;
+}
+
+#image-editor {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+
+#panel {
+  position: absolute;
+  left: 50px;
+  top: 600px;
+}
+
+.block {
+  display: inline-block;
+  margin: 5px;
+}

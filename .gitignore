@@ -1,0 +1,12 @@
+###server
+experiment/
+models/
+test/
+
+###app
+public/
+node_modules/
+
+###general
+.DS_Store
+__pycache__/
