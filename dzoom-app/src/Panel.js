@@ -1,4 +1,5 @@
 import './style.css'
+import axios
 
 const Panel = () => {
   return (
