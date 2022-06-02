@@ -10,3 +10,6 @@ node_modules/
 ###general
 .DS_Store
 __pycache__/
+
+###vim
+*.swp
