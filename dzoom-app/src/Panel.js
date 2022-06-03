@@ -2,15 +2,21 @@ import './style.css';
 import { useRef } from 'react';
 import axios from 'axios';
 
+axios.defaults.baseURL = null;
+
 const Panel = () => {
 
   const x = useRef(null);
   const y = useRef(null);
   const width = useRef(null);
   const height = useRef(null);
-  
+
   const handleClick = () => {
-    return console.log(x.current.value); 
+    console.log("Sending Request...");
+    axios.get('//127.0.0.1:5000', {})
+      .then((response) => {
+      console.log("Done!");
+    });
   };
     
   return (
@@ -20,7 +26,7 @@ const Panel = () => {
       <br/>
       <div className="block"><label>Y : <input ref={y} type="number" id="y"/></label></div>
       <div className="block"><label>Height : <input ref={height} type="number" id="height"/></label></div>
-      <div className="block"><button type="button" id="resolution-button" onClick={handleClick}>Resolution</button></div>
+      <div className="block"><button type="button" onClick={handleClick}>Resolution</button></div>
     </div>
   );
 }
