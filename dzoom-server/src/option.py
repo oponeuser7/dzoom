@@ -50,15 +50,15 @@ parser.add_argument('--model', default='EDSR',
 
 parser.add_argument('--act', type=str, default='relu',
                     help='activation function')
-parser.add_argument('--pre_train', type=str, default='../models/EDSR_x2.pt',
+parser.add_argument('--pre_train', type=str, default='../models/model_best.pt',
                     help='pre-trained model directory')
 parser.add_argument('--extend', type=str, default='.',
                     help='pre-trained model directory')
-parser.add_argument('--n_resblocks', type=int, default=16,
+parser.add_argument('--n_resblocks', type=int, default=32,
                     help='number of residual blocks')
 parser.add_argument('--n_feats', type=int, default=256,
                     help='number of feature maps')
-parser.add_argument('--res_scale', type=float, default=1,
+parser.add_argument('--res_scale', type=float, default=0.1,
                     help='residual scaling')
 parser.add_argument('--shift_mean', default=True,
                     help='subtract pixel mean from the input')
