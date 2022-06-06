@@ -2,6 +2,7 @@
 experiment/
 models/
 test/
+*.png
 
 ###app
 public/
