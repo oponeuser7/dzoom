@@ -11,7 +11,7 @@ input[type='number'] {
   color: #FFFFFF;
   border: 0.5px solid gray;
   border-radius: 20px;
-  font-family: 'Squarea Expanded Oblique', 'Simply Square JL', 'SF Mono', 'Consolas';
+  font-family: 'Squarea Expanded Oblique', 'Squarea', 'SF Mono', 'Consolas';
 }
 
 #image-editor {
