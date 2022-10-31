@@ -1,4 +1,3 @@
-import ImageEditor from './ImageEditor';
 import Panel from './Panel';
 import './style.css';
 
