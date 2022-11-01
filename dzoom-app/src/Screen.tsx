@@ -1,4 +1,5 @@
 import Container from './Container';
+import Panel from './Panel';
 import Header from './Header';
 
 import './style.css';
@@ -7,7 +8,7 @@ const Screen = () => {
   return (
     <div id='screen'>
     <Header />
-    <Container />
+    <Panel />
     </div>
   );
 }
