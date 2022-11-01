@@ -1,4 +1,3 @@
-import Container from './Container';
 import Panel from './Panel';
 import Header from './Header';
 

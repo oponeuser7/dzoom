@@ -1,3 +1,4 @@
+import Image from './Image';
 import './style.css';
 import { useState, useRef } from 'react';
 import axios from 'axios';
@@ -63,11 +64,16 @@ const Panel = () => {
   };
     
   return (
-    <div id='panel'>
-      <div className="block" style={{
-        fontSize: 30,
-        color: '#1357a6'
-      }}>Options</div>
+    <div>
+      <Image src={source}/>
+      <div id='panel'>
+      <div className="block" 
+        style={{
+          fontSize: 30,
+          color: '#1357a6'
+        }}>
+        Options
+      </div>
       <div className="block"><label>Width<input ref={width} type="number" value={0}/></label></div>
       <div className="block"><label>Height<input ref={height} type="number" value={0}/></label></div>
       <div className="block"><label>X<input ref={x} type="number" value={0}/></label></div>
@@ -75,6 +81,7 @@ const Panel = () => {
       <div className="block"><input ref={file} type='file' onChange={uploadImage}/></div>
       <div id="resolution-button"><div onClick={resolution}><div id='resolution-button-word'>Resolution</div></div></div>
       {flag ? <a href={'http://127.0.0.1:5000/static/results/'+file.current?.files?.[0].name+'_x2_SR.png'} target='_blank' rel="noreferrer">Show Result</a> : ''}
+      </div>
     </div>
   );
 }

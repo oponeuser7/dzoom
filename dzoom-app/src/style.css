@@ -22,6 +22,14 @@ input[type='number'] {
   left: 20px;
 }
 
+#image {
+  position: absolute;
+  width: 512px;
+  height: 512px;
+  left: 20vw;
+  top: 20vh;
+}
+
 #image-editor {
   text-align: center;
   border: 1px dotted gray;
