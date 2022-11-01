@@ -4,7 +4,7 @@ import './style.css';
 const Container = () => {
   return (
     <div id="container">
-      <Panel />         
+      <Panel />       
     </div>
   );
 }
