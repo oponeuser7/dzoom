@@ -13,10 +13,10 @@ def hello():
     file_name = request.form['fileName']
     file_name = file_name[:len(file_name)-4]
     file.save('./static/images/'+file_name+'.png')
+    # img = cv2.imread('../experiment/test/results-Demo/'+file_name+'_x2_SR.png')
+    # if img is None: 
+    main()
     img = cv2.imread('../experiment/test/results-Demo/'+file_name+'_x2_SR.png')
-    if img is None: 
-        main()
-        img = cv2.imread('../experiment/test/results-Demo/'+file_name+'_x2_SR.png')
     params = request.form
     x1 = int(params['x'])
     x2 = x1+int(params['width'])

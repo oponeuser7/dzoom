@@ -33,14 +33,13 @@ const Panel = () => {
     setLoading(true);
 
     if(x.current !== null && y.current !== null && width.current !== null && height.current !== null && file.current !== null && file.current.files !== null) {
-      const data = {
-        x: x.current.value,
-        y: y.current.value,
-        width: width.current.value,
-        height: height.current.value,
-        file: file.current.files[0],
-        fileName: file.current.files[0].name
-      };  
+      const data = new FormData();
+      data.append('x', x.current.value);
+      data.append('y', y.current.value);
+      data.append('width', width.current.value);
+      data.append('height', height.current.value);
+      data.append('file', file.current.files[0]);
+      data.append('fileName', file.current.files[0].name);
       axios.post('//127.0.0.1:5000', data)
       .then((response) => {
         setFlag(true);
@@ -74,13 +73,13 @@ const Panel = () => {
         }}>
         Options
       </div>
-      <div className="block"><label>Width<input ref={width} type="number" value={0}/></label></div>
-      <div className="block"><label>Height<input ref={height} type="number" value={0}/></label></div>
-      <div className="block"><label>X<input ref={x} type="number" value={0}/></label></div>
-      <div className="block"><label>Y<input ref={y} type="number" value={0}/></label></div>
+      <div className="block"><label>Width<input ref={width} type="number" placeholder='0'/></label></div>
+      <div className="block"><label>Height<input ref={height} type="number" placeholder='0'/></label></div>
+      <div className="block"><label>X<input ref={x} type="number" placeholder='0'/></label></div>
+      <div className="block"><label>Y<input ref={y} type="number" placeholder='0'/></label></div>
       <div className="block"><input ref={file} type='file' onChange={uploadImage}/></div>
       <div id="resolution-button"><div onClick={resolution}><div id='resolution-button-word'>Resolution</div></div></div>
-      {flag ? <a href={'http://127.0.0.1:5000/static/results/'+file.current?.files?.[0].name+'_x2_SR.png'} target='_blank' rel="noreferrer">Show Result</a> : ''}
+      {flag ? <a href={'http://127.0.0.1:5000/static/results/'+file.current?.files?.[0].name.substring(0, file.current?.files?.[0].name.length-4)+'_x2_SR.png'} target='_blank' rel="noreferrer">Show Result</a> : ''}
       </div>
     </div>
   );
