@@ -80,8 +80,8 @@ const Panel = () => {
       <div className="block"><label>X<input ref={x} type="number" placeholder='0'/></label></div>
       <div className="block"><label>Y<input ref={y} type="number" placeholder='0'/></label></div>
       <div className="block"><input ref={file} type='file' onChange={uploadImage}/></div>
-      <div id="resolution-button"><div onClick={resolution}><div id='resolution-button-word'>{loading ? <img src='public/loading.gif' /> : 'Resolution'}</div></div></div>
-      {flag ? <a href={'http://127.0.0.1:5000/static/results/'+file.current?.files?.[0].name.substring(0, file.current?.files?.[0].name.length-4)+'_x2_SR.png'} target='_blank' rel="noreferrer">Show Result</a> : ''}
+      <div id={loading ? "resolution-button-clicked" : "resolution-button"}><div onClick={resolution}><div id='resolution-button-word'>{loading ? <img id='loading' src='loading.gif' width={50} height={50}/> : 'Resolution'}</div></div></div>
+      {flag ? <div className="block"><a href={'http://127.0.0.1:5000/static/results/'+file.current?.files?.[0].name.substring(0, file.current?.files?.[0].name.length-4)+'_x2_SR.png'} target='_blank' rel="noreferrer">Show Result</a></div> : ''}
       </div>
     </div>
   );

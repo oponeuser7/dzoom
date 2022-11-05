@@ -71,6 +71,19 @@ input[type='number'] {
   font-size: 40px;
 }
 
+#resolution-button-clicked {
+  padding: 10px;
+  top: 80vh;
+  height: 110px;
+  display:flex;
+  align-items:center;
+  position: absolute;
+  width: 100%;
+  background-color: skyblue;
+  color: #ffffff;
+  font-size: 40px;
+}
+
 #resolution-button-word {
   margin: 0;
   padding: 0;
@@ -78,6 +91,11 @@ input[type='number'] {
   top: 30px;
   left: 100px;
 
+}
+
+#loading {
+  position: absolute;
+  left: 100px;
 }
 
 .block {
